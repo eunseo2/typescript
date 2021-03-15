@@ -1,11 +1,14 @@
 import express from 'express';
 
-export const auth = express.Router();
+const auth = express.Router();
 
-const { register, login, logout, check } = require('./auth.ctrl');
+import { register, login, logout, check } from './auth.ctrl';
 
-console.log(register, login);
+// const { register, login, logout, check } = require('./auth.ctrl');
+
 auth.post('/register', register);
 auth.post('login', login);
 auth.post('/logout', logout);
 auth.post('/check', check);
+
+export default auth;

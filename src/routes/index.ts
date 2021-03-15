@@ -2,7 +2,7 @@ import express from 'express';
 
 const routes = express.Router();
 
-const api = require('./api');
+import api from './api';
 
 routes.use('/api', api);
 
